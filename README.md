@@ -30,8 +30,8 @@ Antes de começar, você vai precisar ter instalado:
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/seu-usuario/lumi-energia-frontend.git
-cd lumi-energia-frontend
+git clone https://github.com/marxros/LuxBoard.git
+cd LuxBoard
 ```
 
 2. **Instale as dependências:**
