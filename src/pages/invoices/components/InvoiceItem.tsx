@@ -22,7 +22,7 @@ export const InvoiceItem = ({ invoice }: InvoiceItemProps) => {
       <a
         href={invoice.downloadUrl}
         download
-        className="mt-2 sm:mt-0 inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+        className="mt-2 sm:mt-0 inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
       >
         <FaDownload className="mr-2" />
         Baixar Fatura

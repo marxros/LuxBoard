@@ -47,7 +47,7 @@ export const InvoiceFilters = ({ clientNumber, month, onFilter }: Props) => {
 
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-700 transition"
+        className="bg-green-600 text-white px-4 py-2 rounded-md shadow hover:bg-green-700 transition"
       >
         Filtrar
       </button>

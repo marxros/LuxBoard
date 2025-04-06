@@ -1,8 +1,10 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import DashboardPage from "./pages/dashboard/DashboardPage";
 import { Layout } from "./pages/dashboard/components/ui/Layout";
-import "./index.css";
+import DashboardPage from "./pages/dashboard/DashboardPage";
 import InvoicesPage from "./pages/invoices/InvoicePage";
+import "./index.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/invoices" element={<InvoicesPage />} />
       </Routes>
+      <ToastContainer position="top-right" autoClose={3000} />
     </Layout>
   );
 }
