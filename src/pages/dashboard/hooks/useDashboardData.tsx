@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { DashboardData } from "../types/DashboardData";
+import { api } from "../../../services/api/api";
 
 interface Params {
   clientNumber: string;
@@ -16,16 +16,13 @@ export const useDashboardData = (params: Params) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get<DashboardData>(
-          "http://localhost:3000/dashboard",
-          {
-            params: {
-              clientNumber: params.clientNumber || undefined,
-              start: params.start || undefined,
-              end: params.end || undefined,
-            },
-          }
-        );
+        const response = await api.get<DashboardData>("/dashboard", {
+          params: {
+            clientNumber: params.clientNumber || undefined,
+            start: params.start || undefined,
+            end: params.end || undefined,
+          },
+        });
         setData(response.data);
       } catch (err) {
         console.error("Erro ao buscar dados do dashboard", err);

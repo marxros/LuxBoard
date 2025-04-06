@@ -1,7 +1,4 @@
-// src/services/invoiceApi.ts
-import axios from "axios";
-
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+import { api } from "./api";
 
 export class InvoiceApi {
   static async upload(files: File[]): Promise<void> {
@@ -12,7 +9,7 @@ export class InvoiceApi {
     }
 
     try {
-      await axios.post(`${API_BASE_URL}/invoices/upload`, formData, {
+      await api.post(`/invoices/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

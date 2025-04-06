@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import axios from "axios";
+import { api } from "../../../services/api/api";
 
 interface Invoice {
   id: string;
@@ -22,10 +22,9 @@ export const useInvoices = ({ clientNumber, month }: Filters) => {
   const fetchInvoices = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get<Invoice[]>(
-        "http://localhost:3000/bills",
-        { params: { clientNumber, month } }
-      );
+      const response = await api.get<Invoice[]>("/bills", {
+        params: { clientNumber, month },
+      });
       setInvoices(response.data);
     } catch (error) {
       console.error("Erro ao buscar faturas", error);
