@@ -1,4 +1,4 @@
-# 🌞 Lumi Energia - Frontend
+# 💡 Lumi Energia - Frontend
 
 Este projeto é a interface web do sistema de teste **Lumi Energia**, focado na gestão e visualização de faturas de energia elétrica, consumo e compensação de energia.
 
@@ -66,19 +66,6 @@ npm run dev
 
 5. Acesse a aplicação no navegador:  
 👉 [http://localhost:5173](http://localhost:5173)
-
-
-## 📁 Estrutura básica do projeto
-
-```
-src/
-├── pages/               # Páginas da aplicação
-├── services/            # Lógicas de acesso a API
-├── assets/              # Arquivos estáticos
-├── main.tsx             # Entry point do app
-└── App.tsx              # Arquivo de rotas principais
-
-```
 
 ---
 
