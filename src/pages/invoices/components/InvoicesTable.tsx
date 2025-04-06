@@ -18,6 +18,8 @@ export const InvoicesTable = ({ invoices, loading }: InvoicesTableProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
   const filteredInvoices = invoices.filter((invoice) => {
     const searchLower = search.toLowerCase();
     return (
@@ -88,12 +90,17 @@ export const InvoicesTable = ({ invoices, loading }: InvoicesTableProps) => {
                     R$ {invoice.totalValue.toFixed(2)}
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <a
-                      href="#"
-                      className="font-medium text-green-600 hover:underline"
+                    <button
+                      onClick={() =>
+                        window.open(
+                          `${API_BASE_URL}/bills/download/${invoice.id}`,
+                          "_blank"
+                        )
+                      }
+                      className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md shadow transition"
                     >
-                      Download
-                    </a>
+                      Baixar PDF
+                    </button>
                   </td>
                 </tr>
               ))

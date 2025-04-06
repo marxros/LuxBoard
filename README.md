@@ -1,54 +1,91 @@
-# React + TypeScript + Vite
+# 🌞 Lumi Energia - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é a interface web do sistema de teste **Lumi Energia**, focado na gestão e visualização de faturas de energia elétrica, consumo e compensação de energia.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Chart.js](https://www.chartjs.org/)
+- [Heroicons](https://heroicons.com/)
+- [React DatePicker](https://reactdatepicker.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado:
+
+- [Node.js](https://nodejs.org/) (recomendado: versão 18 ou superior)
+- [Yarn](https://yarnpkg.com/) ou [npm](https://www.npmjs.com/)
+
+---
+
+## 🛠️ Como rodar o projeto
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/seu-usuario/lumi-energia-frontend.git
+cd lumi-energia-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Instale as dependências:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Com Yarn
+yarn install
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# ou com NPM
+npm install
 ```
+
+3. **Configure as variáveis de ambiente:**
+
+Crie um arquivo `.env` na raiz do projeto com o conteúdo abaixo:
+
+```env
+VITE_API_URL=http://localhost:3000
+```
+
+> Altere o valor da variável `VITE_API_URL` conforme a URL onde sua API está rodando.
+
+4. **Inicie o servidor de desenvolvimento:**
+
+```bash
+# Com Yarn
+yarn dev
+
+# ou com NPM
+npm run dev
+```
+
+5. Acesse a aplicação no navegador:  
+👉 [http://localhost:5173](http://localhost:5173)
+
+
+## 📁 Estrutura básica do projeto
+
+```
+src/
+├── pages/               # Páginas da aplicação
+├── services/            # Lógicas de acesso a API
+├── assets/              # Arquivos estáticos
+├── main.tsx             # Entry point do app
+└── App.tsx              # Arquivo de rotas principais
+
+```
+
+---
+
+## 🧠 Autor
+
+Feito com ☕ por **Marx**  
+
+Entre em contato no [LinkedIn](https://www.linkedin.com/in/marx-roberto/)
+
+---
